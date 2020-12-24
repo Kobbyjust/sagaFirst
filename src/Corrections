@@ -1,0 +1,65 @@
+/*--Header--*/
+ <div className="header">
+        <div className="container">
+                      <div className ="navbar">
+               <div className ="sag">
+               <Link to={''}> <img src='/img/sag.png' ></img></Link>
+               </div>
+
+               
+               
+               <nav >   
+                   
+       
+        {
+         
+        userInfo && userInfo.isAdmin && (
+            <div className="drop">
+            <h1>Admin</h1>    <Link to="#admin">Admin{' '}<i className="fa fa-caret-down"></i>                     
+                 </Link>
+                 <ul className="drop-content">
+                     <li>
+                         <Link to="/dashboard">Dashboard</Link>
+                         <Link to="/productlist">Product</Link>
+                         <Link to="/orders">Orders</Link>
+                         <Link to="/userlist">Users</Link>
+                     </li>
+                 </ul>
+            </div>  
+        )}
+                   <ul >
+                       <li ><Link to="/">Home</Link></li>
+                       <li><Link to={'/Form/'}>Form</Link></li>
+                      
+                    <div className="drop">
+                       <li><Link to="#">Stores</Link></li>
+                            <Link to="#"> <i className="fa fa-caret-down"></i> </Link>
+                      <ul className="drop-content">
+                         <li><Link to={'/Books'} >Books</Link></li>
+                         <li><Link to={'/Provision'} >Provision</Link></li>
+                         <li><Link to={'/Mobile'} >Mobile</Link></li>
+                         <li><Link to={'/Cloth'} >Cloth</Link></li>
+                         <li> <Link to={'/Cosmetics'} >Cosmetics</Link></li>
+                         <li> <Link to={'/Computer'} >Computer</Link></li>
+                         <li> <Link to={'/Electronic'} >Electronic</Link></li>
+                         <li> <Link to={'/Footwear'} >Footwear</Link></li>
+                      </ul>
+                    </div>
+                     
+                       <li><Link to="#">Help</Link></li>
+                       <li><Link to="#">Contact</Link></li>
+                   </ul>
+                   <Link to="/Cart/"><img src="/img/cart.png" width="30px" height="30px" className="cartPic"></img>
+                   {
+                      cartItems.length > 0 && (<span className="badge">{cartItems.length}</span> )
+                   }
+                   </Link>
+                   <button onClick={openMenu}><img src="/img/menu.png " width="30px" height="30px" className="menu-icon"></img></button>
+               </nav>  
+           </div>
+       </div>
+           </div>
+
+            <div className="OurStore">   
+        <h1>Our XXXXXXX</h1>  
+    </div> 

@@ -1,0 +1,28 @@
+<div>
+    <div className="account-page">
+    <div className="container1">
+        <div className="row">
+            <div className="col-2">
+            <img src="img/exclusive.png" width="100%"></img>
+            </div>
+            <div className="col-2">
+                <div className="form-container">
+                    <div className="form-btn_1">
+                        <span>Login</span>
+                    </div>
+                      
+                   
+                    <form id="RegForm" >
+                    <input type="email" placeholder="Email" value={email} onChange={(e) => onChange(e)} name="email"></input>
+                    <input type="password" placeholder="password" value={password}  onChange={(e) => onChange(e)} name="password"></input>
+                    <button type="submit" className="btn_1" onClick={() => submitData()}>Signin</button>
+                    <a href="">Forget password</a>
+                   
+                    </form>
+                </div>
+            </div>
+ 
+        </div>
+    </div>
+</div>
+</div>     
